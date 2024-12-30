@@ -1,6 +1,7 @@
 // A GAME DEVELOPED BY ME
 
 #include <iostream>
+#include "conio.h"
 using namespace std;
 void Displayboard(char arr[3][3]) /*Function for displaying the baord*/
 {
@@ -44,7 +45,7 @@ bool checkWinner(char arr2[3][3], char currentPlayer) /* Simple Function for che
     }
     if (arr2[0][2] == currentPlayer && arr2[1][1] == currentPlayer && arr2[2][0] == currentPlayer) // Checking for the Secondary Diagonals
     {
-        cout << " COngratulations The Player " << currentPlayer << " Won the game \n";
+        cout << " Congratulations The Player " << currentPlayer << " Won the game \n";
         return true;
     }
     return false;
@@ -88,7 +89,6 @@ void EnterValue(char arr1[3][3]) /*Funnction for entering values*/
 }
 int main()
 {
-    char start;
     cout << "\t\t\t\t\t\t\t  ___________________________________________________" << endl;
     cout << "\t\t\t\t\t\t\t |                                                   |" << endl;
     cout << "\t\t\t\t\t\t\t |                                                   |" << endl;
@@ -100,7 +100,8 @@ int main()
     cout << "\t\t\t\t\t\t\t |             Please Press  /S/ to Start            |" << endl;
     cout << "\t\t\t\t\t\t\t |                                                   |" << endl;
     cout << "\t\t\t\t\t\t\t |___________________________________________________|" << endl;
-    cin >> start;
+    char start = getch();
+
     if (start == 'S' || start == 's')
     {
         char game[3][3] = {{'1', '2', '3'},
